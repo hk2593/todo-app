@@ -4,7 +4,6 @@ const initialState = {
   token: null,
   name: null,
   todos:[],
-  API_KEY:'https://todo-app-ashen-phi.vercel.app/',
   addtodo:0,
   date:null
   // Add follow status field

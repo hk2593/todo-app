@@ -5,13 +5,13 @@ import UpdateIcon from '@mui/icons-material/Update';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { setTodos } from '../store/authslice';
-
+import { API_KEY } from '../api_key';
 const Todos = () => {
   const Todos = useSelector(state => state.auth.todos);
   const [activeButton, setActiveButton] = useState('Pending');
   const [updateTodoId, setUpdateTodoId] = useState(null); 
   const [showUpdateForm, setShowUpdateForm] = useState(false); 
-  const API_KEY = useSelector(state => state.auth.API_KEY);
+  
   const token = useSelector(state => state.auth.token);
   const dispatch = useDispatch();
   const [title,settitle]=useState('');

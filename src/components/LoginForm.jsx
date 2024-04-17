@@ -2,14 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDate, setLogin, setTodos } from '../store/authslice';
-
+import API_KEY from '../api_key'
 const LoginForm = () => {
   const [l, setl] = useState('login');
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
   const [name,setName]=useState('');
   const dispatch=useDispatch();
-  const API_KEY=useSelector((state)=>state.auth.API_KEY);
+ 
   const handlelogin=async()=>{
     const response = await axios.post(`${API_KEY}auth/login`,{email,password}, {
         
