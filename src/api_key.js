@@ -1,2 +1,2 @@
-const API_KEY = "http://localhost:4000/";
+const API_KEY = "https://todo-app-ashen-phi.vercel.app/";
 export default API_KEY;
